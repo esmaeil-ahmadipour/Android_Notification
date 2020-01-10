@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android_Notification</string>
+    <!-- Main Activity -->
+    <string name="main_btn1">Sample Notification</string>
+    <!-- Notification Data -->
+    <string name="notification_title">Notification App</string>
+    <string name="notification_text">This Is Sample Notification</string>
+
+
+</resources>
