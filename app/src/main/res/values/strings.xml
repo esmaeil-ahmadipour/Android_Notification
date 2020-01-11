@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Android_Notification</string>
     <!-- Main Activity -->
-    <string name="main_btn1">Sample Notification</string>
+    <string name="main_txt">Notification Type :</string>
+    <string name="main_btn">Show Notification</string>
+    <string name="main_rdBtn_sample">Sample</string>
+    <string name="main_rdBtn_largeIcon">Large Icon</string>
     <!-- Notification Data -->
     <string name="notification_title">Notification App</string>
     <string name="notification_text">This Is Sample Notification</string>
