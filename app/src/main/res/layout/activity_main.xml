@@ -36,10 +36,10 @@
             android:text="@string/main_rdBtn_priority" />
 
         <RadioButton
-            android:id="@+id/ac_main_rdBtn_multiLineNotification"
+            android:id="@+id/ac_main_rdBtn_bigTextStyleNotification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/main_rdBtn_multiLine" />
+            android:text="@string/main_rdBtn_bigTextStyle" />
 
     </RadioGroup>
 

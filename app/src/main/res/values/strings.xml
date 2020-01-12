@@ -6,8 +6,12 @@
     <string name="main_rdBtn_sample">Sample</string>
     <string name="main_rdBtn_largeIcon">Large Icon</string>
     <string name="main_rdBtn_priority">Priority</string>
+    <string name="main_rdBtn_bigTextStyle">Big Text Style</string>
+
     <!-- Notification Data -->
     <string name="notification_title">Notification App</string>
     <string name="notification_text">This Is Sample Notification</string>
+    <string name="notification_bigTextStyle">This book is written to be useful to Android developers who are interested in learning Kotlin language.
+        This book is for you if you are in some of the following situations:</string>
 
 </resources>
