@@ -29,7 +29,20 @@
             android:layout_height="wrap_content"
             android:text="@string/main_rdBtn_largeIcon" />
 
+        <RadioButton
+            android:id="@+id/ac_main_rdBtn_priorityNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_rdBtn_priority" />
+
+        <RadioButton
+            android:id="@+id/ac_main_rdBtn_multiLineNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_rdBtn_multiLine" />
+
     </RadioGroup>
+
     <Button
         android:id="@+id/main_btn_showNotification"
         android:layout_width="match_parent"

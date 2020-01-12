@@ -5,9 +5,9 @@
     <string name="main_btn">Show Notification</string>
     <string name="main_rdBtn_sample">Sample</string>
     <string name="main_rdBtn_largeIcon">Large Icon</string>
+    <string name="main_rdBtn_priority">Priority</string>
     <!-- Notification Data -->
     <string name="notification_title">Notification App</string>
     <string name="notification_text">This Is Sample Notification</string>
-
 
 </resources>

@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     Context context = this;
     private Button btnShowNotification;
-    private RadioButton rdBtnSample, rdBtnLargeIcon;
+    private RadioButton rdBtnSample, rdBtnLargeIcon, rdBtnPriority ;
     private RadioGroup rdGroup;
     private int checkedRadioButton;
 
@@ -39,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
                         CustomNotification.getInstance().largeIconNotification(context);
                     }
                     break;
+                    case R.id.ac_main_rdBtn_priorityNotification: {
+                        CustomNotification.getInstance().priorityNotification(context);
+                    }
+                    break;
                     default:
                         Toast.makeText(context, "Please , Select One Item!", Toast.LENGTH_SHORT).show();
                 }
@@ -48,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setViews() {
         btnShowNotification = (Button) findViewById(R.id.main_btn_showNotification);
+        rdBtnPriority = (RadioButton) findViewById(R.id.ac_main_rdBtn_priorityNotification);
         rdBtnLargeIcon = (RadioButton) findViewById(R.id.ac_main_rdBtn_largeIconNotification);
         rdBtnSample = (RadioButton) findViewById(R.id.ac_main_rdBtn_sampleNotification);
         rdGroup = (RadioGroup) findViewById(R.id.ac_main_rdGroup);
     }
-
 
 }

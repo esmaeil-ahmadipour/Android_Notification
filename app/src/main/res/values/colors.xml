@@ -25,7 +25,7 @@
     <color name="errorColor">#607d8b</color>
     <color name="onErrorTextColor">#002555</color>
     <!-- Notification LED -->
-    <color name="notification">#FFFFEB3B</color>
+    <color name="notification">#a20026</color>
     <!--Classic-->
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
