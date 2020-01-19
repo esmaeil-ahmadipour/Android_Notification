@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     Context context = this;
     private Button btnShowNotification;
-    private RadioButton rdBtnSample, rdBtnLargeIcon, rdBtnPriority , rdBtnBigTextStyle , rdBtnBigPictureStyle ;
+    RadioButton rdBtnSample, rdBtnLargeIcon, rdBtnPriority, rdBtnBigTextStyle, rdBtnBigPictureStyle, rdBtnInboxStyle;
     private RadioGroup rdGroup;
     private int checkedRadioButton;
 
@@ -51,21 +51,27 @@ public class MainActivity extends AppCompatActivity {
                         CustomNotification.getInstance().bigPictureStyleNotification(context);
                     }
                     break;
+                    case R.id.ac_main_rdBtn_inboxStyleNotification: {
+                        CustomNotification.getInstance().inboxStyleNotification(context);
+                    }
+                    break;
                     default:
-                        Toast.makeText(context, "Please , Select One Item!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Please , Select One Item!", Toast.LENGTH_SHORT)
+                                .show();
                 }
             }
         });
     }
 
     private void setViews() {
-        btnShowNotification = (Button) findViewById(R.id.main_btn_showNotification);
-        rdBtnBigPictureStyle =(RadioButton) findViewById(R.id.ac_main_rdBtn_bigPictureStyleNotification);
-        rdBtnBigTextStyle =(RadioButton) findViewById(R.id.ac_main_rdBtn_bigTextStyleNotification);
-        rdBtnPriority = (RadioButton) findViewById(R.id.ac_main_rdBtn_priorityNotification);
-        rdBtnLargeIcon = (RadioButton) findViewById(R.id.ac_main_rdBtn_largeIconNotification);
-        rdBtnSample = (RadioButton) findViewById(R.id.ac_main_rdBtn_sampleNotification);
-        rdGroup = (RadioGroup) findViewById(R.id.ac_main_rdGroup);
+        btnShowNotification = findViewById(R.id.main_btn_showNotification);
+        rdBtnInboxStyle = findViewById(R.id.ac_main_rdBtn_inboxStyleNotification);
+        rdBtnBigPictureStyle = findViewById(R.id.ac_main_rdBtn_bigPictureStyleNotification);
+        rdBtnBigTextStyle = findViewById(R.id.ac_main_rdBtn_bigTextStyleNotification);
+        rdBtnPriority = findViewById(R.id.ac_main_rdBtn_priorityNotification);
+        rdBtnLargeIcon = findViewById(R.id.ac_main_rdBtn_largeIconNotification);
+        rdBtnSample = findViewById(R.id.ac_main_rdBtn_sampleNotification);
+        rdGroup = findViewById(R.id.ac_main_rdGroup);
     }
 
 

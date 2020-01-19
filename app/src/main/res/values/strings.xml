@@ -8,11 +8,19 @@
     <string name="main_rdBtn_priority">Priority</string>
     <string name="main_rdBtn_bigTextStyle">Big Text Style</string>
     <string name="main_rdBtn_bigPictureStyle">Big Picture Style</string>
+    <string name="main_rdBtn_inboxStyle">Inbox Style</string>
 
     <!-- Notification Data -->
     <string name="notification_title">Notification App</string>
     <string name="notification_text">This Is Sample Notification</string>
     <string name="notification_bigTextStyle">This book is written to be useful to Android developers who are interested in learning Kotlin language.
         This book is for you if you are in some of the following situations:</string>
+    <string name="notification_inbox_text_1">You Have (</string>
+    <string name="notification_inbox_text_2">) New Messages.</string>
+    <string name="notification_inbox_message1">John Send a New Message.</string>
+    <string name="notification_inbox_message2">Mick Send a New Message.</string>
+    <string name="notification_inbox_message3">Ronny Send a New Message.</string>
+    <string name="notification_inbox_message4">Mat Send a New Message.</string>
+    <string name="notification_inbox_message5">Elly Send a New Message.</string>
 
 </resources>
