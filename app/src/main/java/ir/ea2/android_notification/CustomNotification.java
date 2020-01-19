@@ -133,8 +133,6 @@ public class CustomNotification {
                 .setContentText(context.getResources().getString(R.string.notification_text))
                 .setContentTitle(context.getResources().getString(R.string.notification_title))
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
-                //Lock Notification On Top & Disable Swipe for Clear Notification.
-                .addAction(R.drawable.ic_add_item,"Add Item To Cart",pendingIntent)
                 //Set Color For NotificationSmallIcon & App Name .
                 .setColor(context.getResources().getColor(R.color.notification));
 
@@ -150,5 +148,40 @@ public class CustomNotification {
         //Call Notification .
         notificationManager.notify(notificationId, notification.build());
     }
+    public void bigPictureStyleNotification(Context context){
+        //Set NotificationId : This is For Avoid From Conflicted Notification's Together .
+        int notificationId = 1005;
+        int requestPendingIntent=105;
 
+        //Set Intent For Using In TaskStackBuilder .
+        Intent intent = new Intent(context, SecondaryActivity.class);
+        // Set backIntent For Going Previous Activity .
+        Intent backIntent = new Intent(context, MainActivity.class);
+        backIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        //Set TaskStackBuilder For Using In PendingIntent .
+        TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
+        stackBuilder.addNextIntent(intent);
+        //Set PendingIntent For Using In setContentIntent() .
+        PendingIntent pendingIntent = PendingIntent.getActivities(context , requestPendingIntent++,new Intent[]{backIntent,intent},PendingIntent.FLAG_UPDATE_CURRENT);
+
+        //Set Notification's Option's
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(context).setSmallIcon(R.mipmap.ic_launcher)
+                .setContentText(context.getResources().getString(R.string.notification_text))
+                .setContentTitle(context.getResources().getString(R.string.notification_title))
+                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
+                //Set Color For NotificationSmallIcon & App Name .
+                .setColor(context.getResources().getColor(R.color.notification));
+
+        //Set Custom Big Text Style .
+        NotificationCompat.BigPictureStyle bigPictureStyle = new NotificationCompat.BigPictureStyle().bigPicture(BitmapFactory.decodeResource(context.getResources() , R.drawable.picture_notification));
+        //Set Style For Notification By Passing BigTextStyle.
+        notification.setStyle(bigPictureStyle);
+
+        //Set Intent To Notification.
+        notification.setContentIntent(pendingIntent);
+        //Set NotificationManager For Running In Background .
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
+        //Call Notification .
+        notificationManager.notify(notificationId, notification.build());
+    }
 }

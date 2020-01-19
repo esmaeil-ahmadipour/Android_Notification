@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     Context context = this;
     private Button btnShowNotification;
-    private RadioButton rdBtnSample, rdBtnLargeIcon, rdBtnPriority , rdBtnBigTextStyle;
+    private RadioButton rdBtnSample, rdBtnLargeIcon, rdBtnPriority , rdBtnBigTextStyle , rdBtnBigPictureStyle ;
     private RadioGroup rdGroup;
     private int checkedRadioButton;
 
@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
                         CustomNotification.getInstance().bigTextStyleNotification(context);
                     }
                     break;
+                    case R.id.ac_main_rdBtn_bigPictureStyleNotification: {
+                        CustomNotification.getInstance().bigPictureStyleNotification(context);
+                    }
+                    break;
                     default:
                         Toast.makeText(context, "Please , Select One Item!", Toast.LENGTH_SHORT).show();
                 }
@@ -56,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setViews() {
         btnShowNotification = (Button) findViewById(R.id.main_btn_showNotification);
+        rdBtnBigPictureStyle =(RadioButton) findViewById(R.id.ac_main_rdBtn_bigPictureStyleNotification);
         rdBtnBigTextStyle =(RadioButton) findViewById(R.id.ac_main_rdBtn_bigTextStyleNotification);
         rdBtnPriority = (RadioButton) findViewById(R.id.ac_main_rdBtn_priorityNotification);
         rdBtnLargeIcon = (RadioButton) findViewById(R.id.ac_main_rdBtn_largeIconNotification);
